@@ -1,16 +1,36 @@
-# Day 02 — Automatic Heat Detection System
+# October Hardware Challenge 2026
 
-## Overview
+**31 Days • 31 Hardware Projects**
 
-The Automatic Heat Detection System is an embedded system designed to monitor temperature and automatically trigger an alert when the temperature exceeds a predefined threshold.
+Welcome to my **October Hardware Challenge 2026**.
 
-This project was developed as part of my **October Hardware Challenge**, where I am building and documenting a different hardware-based project every day.
+For 31 days, I am building a new hardware/embedded-systems project every day, focusing on learning how sensors, actuators, microcontrollers, displays, communication modules, and other hardware components work together.
 
-## Objective
+The goal is to build strong practical foundations in **embedded systems and hardware engineering** through daily hands-on projects.
 
-The objective of this project is to understand how a microcontroller can read temperature data from a sensor and use that data to control output devices automatically.
+---
 
-## Components
+## Challenge Progress
+
+| Day | Project                         | Main Hardware              | Status                                           |
+| --- | ------------------------------- | -------------------------- | ------------------------------------------------ |
+| 01  | Environment Data Logging System | ESP32 + DHT22              | [View Project](https://github.com/iabdullah2005) |
+| 02  | Automatic Heat Detection System | ESP32 + Temperature Sensor | Completed                                        |
+| 03  | Smart Parking Assistant         | ESP32 + HC-SR04            | Planned                                          |
+| 04  | Coming Soon                     | —                          | Planned                                          |
+| 05  | Coming Soon                     | —                          | Planned                                          |
+| ... | ...                             | ...                        | ...                                              |
+| 31  | Final Project                   | —                          | Planned                                          |
+
+---
+
+## Day 02 — Automatic Heat Detection System
+
+The second project of the challenge is an **Automatic Heat Detection System**.
+
+The system monitors temperature using a sensor connected to an ESP32 and activates an alert when the temperature exceeds a predefined threshold.
+
+### Components
 
 * ESP32 DevKit V1
 * Temperature sensor
@@ -19,50 +39,46 @@ The objective of this project is to understand how a microcontroller can read te
 * Breadboard
 * Jumper wires
 
-## Simulation
+### Simulation
 
-The project was designed and tested using **Velxio**.
+The project was developed and tested using **Velxio**.
 
-## How It Works
+### Project Files
 
-1. The temperature sensor provides the current temperature to the ESP32.
-2. The ESP32 reads and processes the sensor value.
-3. The temperature is compared with a predefined threshold.
-4. If the temperature exceeds the threshold:
-
-   * The warning LED is activated.
-   * The buzzer is activated.
-5. When the temperature returns below the threshold, the alert is deactivated.
-
-## Project Structure
-
-```text
-Day-02-Automatic-Heat-Detection/
-├── sketch.ino
-├── diagram.json
-├── libraries.txt
-├── wokwi-project.txt
-└── README.md
-```
-
-## Learning Outcomes
-
-Through this project, I practiced:
-
-* ESP32 GPIO control
-* Reading sensor data
-* Conditional logic
-* Digital output control
-* Buzzer and LED control
-* Hardware simulation
-* Basic embedded-system programming
-
-## October Hardware Challenge
-
-**Day 02 / 31**
-
-The goal of this challenge is to build one hardware-focused project every day while gradually learning embedded systems, sensors, actuators, microcontrollers, and hardware interfacing.
+[Open Day 02 Project](./Day-02-Automatic-Heat-Detection/)
 
 ---
 
-**Next Project:** Day 03 — Smart Parking Assistant
+## Challenge Goals
+
+Throughout the challenge, I will focus on:
+
+* Microcontrollers
+* Sensors
+* Actuators
+* GPIO
+* Digital and analog signals
+* Displays
+* Motors
+* Communication protocols
+* Embedded programming
+* Hardware interfacing
+* Real-world automation systems
+
+AI/ML integration will be considered separately after building a strong hardware foundation.
+
+---
+
+## Progress
+
+**Day 02 / 31**
+
+Building one project every day throughout October 2026.
+
+---
+
+## Author
+
+**Abdullah**
+
+GitHub: [@iabdullah2005](https://github.com/iabdullah2005)
