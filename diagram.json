@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "author": "Velxio",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-velxio-esp32",
+      "id": "esp32",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht22_1790949314047_w5o728kra",
+      "top": 343,
+      "left": 42,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_1790949334144_mcizvkpak",
+      "top": -25,
+      "left": 212,
+      "attrs": {
+        "value": false,
+        "brightness": 1,
+        "color": "red",
+        "lightColor": null,
+        "label": "",
+        "flip": false
+      }
+    },
+    {
+      "type": "wokwi-resistor-10k",
+      "id": "resistor_10k_1790949341464_fibtfhg7s",
+      "top": 263,
+      "left": 126,
+      "rotate": 90,
+      "attrs": {
+        "value": "10000"
+      }
+    },
+    {
+      "type": "wokwi-resistor-220",
+      "id": "resistor_220_1790949344024_fiiwd7qww",
+      "top": 96,
+      "left": 178,
+      "rotate": 90,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer_1790949356464_c4on2vhkg",
+      "top": 29,
+      "left": -111,
+      "rotate": 90,
+      "attrs": {
+        "hasSignal": false
+      }
+    },
+    {
+      "type": "wokwi-junction",
+      "id": "junction_c5e178a8-a56b-4c38-bad4-c92ad7fb371e",
+      "top": 291,
+      "left": 220,
+      "attrs": {
+        "color": "#22c55e",
+        "state": false,
+        "value": false
+      }
+    }
+  ],
+  "connections": [
+    [
+      "dht22_1790949314047_w5o728kra:VCC",
+      "resistor_10k_1790949341464_fibtfhg7s:2",
+      "#cc0000",
+      []
+    ],
+    [
+      "resistor_10k_1790949341464_fibtfhg7s:1",
+      "esp32:3V3",
+      "#cc0000",
+      []
+    ],
+    [
+      "dht22_1790949314047_w5o728kra:GND",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "buzzer_1790949356464_c4on2vhkg:2",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "buzzer_1790949356464_c4on2vhkg:1",
+      "esp32:25",
+      "#22c55e",
+      []
+    ],
+    [
+      "resistor_220_1790949344024_fiiwd7qww:2",
+      "esp32:15",
+      "#22c55e",
+      []
+    ],
+    [
+      "led_1790949334144_mcizvkpak:C",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "led_1790949334144_mcizvkpak:A",
+      "resistor_220_1790949344024_fiiwd7qww:1",
+      "#22c55e",
+      []
+    ],
+    [
+      "dht22_1790949314047_w5o728kra:SDA",
+      "junction_c5e178a8-a56b-4c38-bad4-c92ad7fb371e:J",
+      "#22c55e",
+      []
+    ],
+    [
+      "junction_c5e178a8-a56b-4c38-bad4-c92ad7fb371e:J",
+      "esp32:4",
+      "#22c55e",
+      []
+    ],
+    [
+      "resistor_10k_1790949341464_fibtfhg7s:2",
+      "junction_c5e178a8-a56b-4c38-bad4-c92ad7fb371e:J",
+      "#22c55e",
+      []
+    ]
+  ]
+}
