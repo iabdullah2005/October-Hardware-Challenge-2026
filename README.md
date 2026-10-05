@@ -1,84 +1,128 @@
 # October Hardware Challenge 2026
 
-**31 Days • 31 Hardware Projects**
+A 31-day challenge focused on building, simulating, documenting, and sharing hardware and embedded-system projects.
 
-Welcome to my **October Hardware Challenge 2026**.
-
-For 31 days, I am building a new hardware/embedded-systems project every day, focusing on learning how sensors, actuators, microcontrollers, displays, communication modules, and other hardware components work together.
-
-The goal is to build strong practical foundations in **embedded systems and hardware engineering** through daily hands-on projects.
-
----
+The projects are developed using **ESP32** and simulated primarily in **Velxio**.
 
 ## Challenge Progress
 
-| Day | Project                         | Main Hardware              | Status                                           |
-| --- | ------------------------------- | -------------------------- | ------------------------------------------------ |
-| 01  | Environment Data Logging System | ESP32 + DHT22              | [View Project](https://github.com/iabdullah2005) |
-| 02  | Automatic Heat Detection System | ESP32 + Temperature Sensor | Completed                                        |
-| 03  | Smart Parking Assistant         | ESP32 + HC-SR04            | Planned                                          |
-| 04  | Coming Soon                     | —                          | Planned                                          |
-| 05  | Coming Soon                     | —                          | Planned                                          |
-| ... | ...                             | ...                        | ...                                              |
-| 31  | Final Project                   | —                          | Planned                                          |
+| Day | Project | Main Components | Status |
+|-----|---------|-----------------|--------|
+| Day 01 | Environment Data Logging System | ESP32, DHT22 | Completed |
+| Day 02 | Automatic Heat Detection System | ESP32, Temperature Sensor, LED, Buzzer | Completed |
+| Day 03 | Smart Parking Assistant | ESP32, HC-SR04, Servo, LEDs, Buzzer | Completed |
+| Day 04 | Smart Door Lock System | ESP32, 4×4 Keypad, Servo, LEDs, Buzzer | Completed |
+| Day 05 | Smart Pedestrian Crossing | ESP32, LCD, Push Button, LEDs, Buzzer | Completed |
+| Day 06 | Coming Soon | — | Planned |
+| Day 07 | Coming Soon | — | Planned |
+| Day 08 | Coming Soon | — | Planned |
+| Day 09 | Coming Soon | — | Planned |
 
 ---
 
-## Day 02 — Automatic Heat Detection System
+## Projects
 
-The second project of the challenge is an **Automatic Heat Detection System**.
+### Day 01 — Environment Data Logging System
 
-The system monitors temperature using a sensor connected to an ESP32 and activates an alert when the temperature exceeds a predefined threshold.
+An ESP32-based environmental monitoring project using a DHT22 sensor to collect temperature and humidity readings and send timestamped data for analysis.
 
-### Components
+**Main Hardware:**
+- ESP32
+- DHT22
+- Breadboard
+- Jumper wires
 
-* ESP32 DevKit V1
-* Temperature sensor
-* LED
-* Buzzer
-* Breadboard
-* Jumper wires
-
-### Simulation
-
-The project was developed and tested using **Velxio**.
-
-### Project Files
-
-[Open Day 02 Project](./Day-02-Automatic-Heat-Detection/)
+> Day 01 was maintained in a separate repository.
 
 ---
 
-## Challenge Goals
+### Day 02 — Automatic Heat Detection System
 
-Throughout the challenge, I will focus on:
+A temperature monitoring and alert system that detects abnormal heat conditions and activates visual and audio alerts.
 
-* Microcontrollers
-* Sensors
-* Actuators
-* GPIO
-* Digital and analog signals
-* Displays
-* Motors
-* Communication protocols
-* Embedded programming
-* Hardware interfacing
-* Real-world automation systems
+**Main Hardware:**
+- ESP32
+- Temperature sensor
+- LED
+- Buzzer
 
-AI/ML integration will be considered separately after building a strong hardware foundation.
+**Simulation:** Velxio
+
+📁 [`Day-02-Automatic-Heat-Detection`](./Day-02-Automatic-Heat-Detection)
 
 ---
 
-## Progress
+### Day 03 — Smart Parking Assistant
 
-**Day 02 / 31**
+A parking assistance system that uses an ultrasonic sensor to detect vehicle distance and provide visual and audio feedback.
 
-Building one project every day throughout October 2026.
+**Main Hardware:**
+- ESP32
+- HC-SR04 Ultrasonic Sensor
+- Servo Motor
+- Red, Yellow and Green LEDs
+- Buzzer
+
+**Distance Logic:**
+
+- Above 50 cm → Parking Available
+- 20–50 cm → Vehicle Approaching
+- Below 20 cm → Vehicle Too Close
+
+**Simulation:** Velxio
+
+📁 [`Day03`](./Day03)
 
 ---
 
-## Author
+### Day 04 — Smart Door Lock System
 
-**Abdullah**
+A keypad-controlled electronic door lock using an ESP32. Users enter a PIN to unlock the system, while LEDs and a buzzer provide access feedback.
 
-GitHub: [@iabdullah2005](https://github.com/iabdullah2005)
+**Main Hardware:**
+- ESP32
+- 4×4 Matrix Keypad
+- Servo Motor
+- Green LED
+- Red LED
+- Buzzer
+
+**Default PIN:**
+
+`1234`
+
+**Simulation:** Velxio
+
+📁 [`Day04`](./Day04)
+
+---
+
+### Day 05 — Smart Pedestrian Crossing
+
+A pedestrian crossing controller that combines a push button, traffic LEDs, LCD countdown, and buzzer to simulate a smart road-crossing system.
+
+**Main Hardware:**
+- ESP32
+- 16×2 I2C LCD
+- Push Button
+- Red LED
+- Yellow LED
+- Green LED
+- Buzzer
+
+**System Flow:**
+
+```text
+ROAD CLEAR
+     ↓
+Button Pressed
+     ↓
+GET READY
+     ↓
+Traffic STOPPED
+     ↓
+10 Second Countdown
+     ↓
+CROSS NOW
+     ↓
+ROAD CLEAR

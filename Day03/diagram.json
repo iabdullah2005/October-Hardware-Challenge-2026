@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "author": "Velxio",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-velxio-esp32",
+      "id": "esp32",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "hc_sr04_1791019547629_nsfdiuews",
+      "top": -167,
+      "left": -24,
+      "attrs": {
+        "distance": 30
+      }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo_1791019561886_tas4g3g45",
+      "top": 90,
+      "left": -270,
+      "rotate": 180,
+      "attrs": {
+        "angle": 0,
+        "horn": "single",
+        "hornColor": "#ccc"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_1791019591086_kjbluoxuj",
+      "top": -8,
+      "left": -179,
+      "attrs": {
+        "value": false,
+        "brightness": 1,
+        "color": "red",
+        "lightColor": null,
+        "label": "",
+        "flip": false
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_1791019606178_gxej20su3",
+      "top": -164,
+      "left": -183,
+      "attrs": {
+        "value": false,
+        "brightness": 1,
+        "color": "green",
+        "lightColor": null,
+        "label": "",
+        "flip": false
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_1791019610578_32h4hjg92",
+      "top": -83,
+      "left": -182,
+      "attrs": {
+        "value": false,
+        "brightness": 1,
+        "color": "yellow",
+        "lightColor": null,
+        "label": "",
+        "flip": false
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer_1791019622759_z55nvwg6k",
+      "top": -268,
+      "left": -257,
+      "attrs": {
+        "hasSignal": false
+      }
+    },
+    {
+      "type": "wokwi-resistor-220",
+      "id": "resistor_220_1791019639511_wai6gcvri",
+      "top": -116,
+      "left": -162,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor-220",
+      "id": "resistor_220_1791037773496_n4dpz2d7o",
+      "top": -37,
+      "left": -156,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor-220",
+      "id": "resistor_220_1791037912883_2eq0j5j46",
+      "top": 39,
+      "left": -148,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "hc_sr04_1791019547629_nsfdiuews:VCC",
+      "esp32:VIN",
+      "#cc0000",
+      []
+    ],
+    [
+      "hc_sr04_1791019547629_nsfdiuews:GND",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "hc_sr04_1791019547629_nsfdiuews:TRIG",
+      "esp32:5",
+      "#22c55e",
+      []
+    ],
+    [
+      "hc_sr04_1791019547629_nsfdiuews:ECHO",
+      "esp32:18",
+      "#22c55e",
+      []
+    ],
+    [
+      "servo_1791019561886_tas4g3g45:GND",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "servo_1791019561886_tas4g3g45:PWM",
+      "esp32:19",
+      "#22c55e",
+      []
+    ],
+    [
+      "servo_1791019561886_tas4g3g45:V+",
+      "esp32:VIN",
+      "#cc0000",
+      []
+    ],
+    [
+      "led_1791019606178_gxej20su3:A",
+      "resistor_220_1791019639511_wai6gcvri:1",
+      "#22c55e",
+      []
+    ],
+    [
+      "led_1791019610578_32h4hjg92:A",
+      "resistor_220_1791037773496_n4dpz2d7o:1",
+      "#22c55e",
+      []
+    ],
+    [
+      "led_1791019591086_kjbluoxuj:A",
+      "resistor_220_1791037912883_2eq0j5j46:1",
+      "#22c55e",
+      []
+    ],
+    [
+      "led_1791019606178_gxej20su3:C",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "led_1791019610578_32h4hjg92:C",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "led_1791019591086_kjbluoxuj:C",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "buzzer_1791019622759_z55nvwg6k:2",
+      "esp32:23",
+      "#22c55e",
+      []
+    ],
+    [
+      "buzzer_1791019622759_z55nvwg6k:1",
+      "esp32:GND",
+      "black",
+      []
+    ],
+    [
+      "resistor_220_1791019639511_wai6gcvri:2",
+      "esp32:25",
+      "#22c55e",
+      []
+    ],
+    [
+      "resistor_220_1791037773496_n4dpz2d7o:2",
+      "esp32:26",
+      "#22c55e",
+      []
+    ],
+    [
+      "resistor_220_1791037912883_2eq0j5j46:2",
+      "esp32:27",
+      "#22c55e",
+      []
+    ]
+  ]
+}
